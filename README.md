@@ -1,2 +1,2 @@
-# Kick-Task-Page
-Task for application to Kick Interactive
+# Kick Task Page
+Kitchen demo page
