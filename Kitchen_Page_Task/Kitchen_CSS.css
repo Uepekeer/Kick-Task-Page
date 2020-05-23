@@ -1,0 +1,417 @@
+body {
+	font-family: 'open sans', 'Segoe UI', Tahoma, sans-serif;
+	margin: 0px;
+	width: 100%;
+}
+
+h1, h2, h3 {
+	color: #1b3e58;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 2.7em;
+}
+
+h2 {
+	margin-top: 0;
+	font-size: 1.3em;
+}
+
+h3 {
+	font-size: 1em;
+	margin: 4% 0 3% 0;
+}
+
+p {
+	margin: 0 5% 10px 5%;
+	font-size: 0.8em;
+	font-weight: 600;
+	line-height: 130%;
+	color: #636363;
+}
+
+.page-core {
+	flex-direction: column;
+	width: 100%;
+	background-color: #ffffff;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.content-wrap {
+	flex-flow: column wrap;
+	align-content: center;
+	max-width: 860px;
+	padding: 25px 0 25px 0;
+}
+
+.grey-bg {
+	background-color: #eeeeee;
+	width: 100%;
+}
+
+/* HEADER/NAV */
+
+.nav-header {
+	background-color: #0e4966;
+	flex-direction: column;
+}
+
+.logo {
+	width: 80px;
+	padding: 10px 0 10px 0
+}
+
+.logo-false {
+	display: none;
+}
+
+.nav-group {
+	flex-flow: column wrap;
+}
+
+.nav-link {
+	color: white;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.9em;
+	padding: 0px 20px 0px 20px;
+	margin: 10px 0 10px 0;
+	white-space: nowrap;
+}
+
+.banner-top {
+	background-image: url(Images/BannerImage_Kitchen.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	height: 335px;
+}
+
+@media screen and (min-width: 395px) {
+	.nav-group {
+		flex-direction: row;
+	}
+}
+
+@media screen and (min-width: 1090px) {
+	.nav-header {
+		flex-flow: row nowrap;
+		height: 120px;
+	}
+	
+	.logo {
+		margin-left: 13.5%;
+		margin-right: auto;
+	}
+	
+	.logo-false {
+		width: 80px;
+		display: inline-block;
+		visibility: hidden;
+		margin-left: auto;
+		margin-right: 13.5%;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.banner-top{
+		background-size: 110%;
+		background-position: -200px -675px;
+	}
+}
+
+/* KITCHEN */
+
+.kitchen-row {
+	display: flex;
+	width: 100%;
+	flex-flow: wrap row;
+	justify-content: space-around;
+	align-content: center;
+	align-items: stretch;
+	padding-top: 2%;
+}
+
+.kitchen-item {
+	width: 275px;
+	margin: 1% 0 1% 0;
+}
+
+ .kitchen-img {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 155px;
+ }
+ 
+.kitchen-img img {
+	width: 275px;
+}
+
+@media screen and (min-width: 896px) {
+	.kitchen-row {
+		justify-content: space-between;
+	}
+}
+
+/* GALLERY */
+
+.showroom-gallery {
+	max-width: 860px;
+}
+
+.glr img {
+	object-fit: cover;
+}
+
+.glr-1 {
+	grid-area: gl-left;
+}
+
+.glr-2 {
+	grid-area: gl-top;
+}
+
+.glr-3 {
+	grid-area: gl-mid;
+}
+
+.glr-4 {
+	grid-area: gl-right;
+}
+
+.glr-5 {
+	grid-area: gl-bottom;
+}
+
+.gallery-container {
+	display: grid;
+	grid-gap: 3%;
+	max-width: 860px;
+	grid-template-areas:
+    'gl-left gl-top gl-top'
+	'gl-left gl-mid gl-right'
+    'gl-left gl-mid gl-bottom';
+	grid-template-rows: repeat(3, 220px);
+	margin: 35px 0 75px 0;
+}
+
+.glr-2 img {
+	max-height: 100%;
+	width: 100%;
+}
+
+.glr-4 img, .glr-5 img, .glr-3 img {
+	max-width: 100%;
+	height: 100%;
+}
+
+.gallery-odd {
+	display: flex; 
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.glr-1-top {
+	max-width: 100%;
+	height: 38.5%;
+}
+
+.glr-1-bottom {
+	max-width: 100%;
+	height: 58.5%;
+}
+
+/* BRANDS */
+
+#brands {
+	padding: 35px 3% 60px 3%;
+}
+
+.brands-wrap {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.brands-wrap img {
+	object-fit: contain;
+	width: 16%;
+	height: auto;
+	opacity: 0.65;
+	margin: 0;
+}
+
+/* FITTING */
+
+#fitting h2 {
+	margin: 3% 0 3% 0;
+}
+
+#fitting .kitchen-item {
+	background-color: #163d57;
+	color: white;
+}
+
+#fitting h3, #fitting .kitchen-item p {
+	color: white;
+}
+
+#fitting .kitchen-item p {
+	font-size: 0.7em;
+	margin: 0 5% 7% 5%;
+}
+	
+.fitting-row {
+	display: flex;
+	justify-content: center;
+	flex-flow: wrap row;
+}	
+
+.fitting-img {
+	max-width: 100%;
+	height: 470px;
+	object-fit: cover;
+	object-position: 65%;
+}
+
+.fitting-column {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 0 0 0 2%;
+}
+
+@media screen and (min-width: 875px) {
+	
+	p {
+		margin: 0 0 10px 0;
+	}
+	.fitting-row{
+		flex-flow: nowrap row;
+		justify-content: space-between;
+	}
+	.fitting-img {
+		max-width: 420px;
+		flex-shrink: 0;
+	}
+	.fitting-column {
+		text-align: left;
+	}
+	#fitting h2 {
+		margin: 0 0 3% 0;
+	}
+	.watch-bdr {
+		padding-bottom: 3%;
+	}
+}
+
+
+/* FOOTER */
+
+.footer-wrap {
+	display: block;
+	width: 100%;
+	background-color: #e2e2e2;
+}
+
+.footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 10% 0 10%;
+	height: 100%;'
+}
+
+.footer-top{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.footer-item{
+	font-size: 0.9em;
+	font-weight: 600;
+	text-align: center;
+	margin: 1%;
+}
+
+.socials {
+	display:flex;
+	justify-content: center;
+}
+
+.social-icon {
+	display: inline-block;
+	width: 31px;
+	height: 30px;
+	margin: 1%;
+	background-repeat: no-repeat;
+	background-image: url(ICONS/SocialIcons.png);
+	background-size: 90px 30px;
+}
+
+.social-icon:hover {
+	cursor: pointer;
+}
+
+.fb-icon {
+	background-position: -30px 0;
+}
+.tw-icon{
+	background-position: -60px 0;
+}
+.in-icon{
+	background-position: 0 0;
+}
+
+
+
+.footer-line{
+	width: 100%;
+	height: 1px;
+	background-color: #6b6a6a;
+	margin: 2% 0 1% 0;
+}
+
+.footer-end{
+	font-size: 0.8em;
+	color: #6b6a6a;
+	margin: 0 0 1% 0;
+	text-align: center;
+}
+
+@media screen and (min-width: 575px) {
+	.footer-wrap{
+		height: 140px;
+	}
+	.footer{
+	
+	}
+	.footer-top{
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+	.socials {
+		margin: 0 0 1% auto;
+	}
+	.footer-item{
+		text-align: left;
+		margin: 1% 5% 1% 0;
+	}
+	.social-icon {
+		margin-left: 15px;
+	}
+	.footer-end{
+		text-align: left;
+	}
+}
